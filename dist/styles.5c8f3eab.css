@@ -147,6 +147,7 @@ table {
 body {
   background: #090909;
   color: white;
+  font-family: Elsie;
 }
 
 .welcome {
@@ -179,7 +180,6 @@ body {
 .container {
   font-size: 24px;
   color: black;
-  font-family: Elsie;
 }
 @media (min-width: 1000px) {
   .container {
@@ -191,7 +191,6 @@ footer {
   left: 0;
   margin-top: 90px;
   width: 100%;
-  font-family: Elsie;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -286,7 +285,7 @@ footer .footer__social .footer__social--three {
     justify-content: flex-end;
     padding-top: 30px;
     position: initial;
-    width: 435px;
+    width: 465px;
   }
 }
 
@@ -295,7 +294,6 @@ footer .footer__social .footer__social--three {
 }
 
 .items-menu a {
-  font-family: Elsie;
   color: white;
   text-decoration: none;
 }
@@ -315,7 +313,6 @@ footer .footer__social .footer__social--three {
 }
 
 .projets__citation {
-  font-family: Elsie;
   padding: 20px;
   text-align: center;
   font-size: 24px;
@@ -345,7 +342,6 @@ footer .footer__social .footer__social--three {
   align-items: center;
   justify-content: center;
   font-size: 47px;
-  font-family: Elsie;
   text-shadow: rgba(0, 0, 0, 0.541) 0 0 6px;
   text-align: center;
 }
@@ -383,7 +379,6 @@ footer .footer__social .footer__social--three {
   background: #DA5469;
   margin-top: -10vh;
   z-index: -1;
-  font-family: Elsie;
   font-size: 70px;
   text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
@@ -396,14 +391,12 @@ footer .footer__social .footer__social--three {
 .article__title {
   font-size: 30px;
   text-align: center;
-  font-family: Elsie;
   margin-top: 30px;
 }
 
 .article__content {
   margin-top: 18px;
   padding: 22px;
-  font-family: Elsie;
   font-size: 17px;
   text-align: center;
 }
@@ -417,23 +410,81 @@ footer .footer__social .footer__social--three {
   background: teal;
 }
 
-.about__communication {
-  font-family: Elsie;
+.about__content {
   height: auto;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+@media (min-width: 1020px) {
+  .about__content {
+    text-align: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+
+.about__presentation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 300px;
-  margin-left: 22px;
-  padding-top: 20px;
+}
+.about__presentation p {
+  margin-top: 20px;
+}
+@media (min-width: 1020px) {
+  .about__presentation {
+    width: 410px;
+    margin-right: 300px;
+  }
+}
+
+.about__presentation__title {
+  color: white;
+  font-size: 27px;
+  text-align: center;
+}
+@media (min-width: 1020px) {
+  .about__presentation__title {
+    text-align: initial;
+  }
+}
+
+.about__contact {
+  width: 300px;
+  margin-top: 30px;
+}
+.about__contact p {
+  margin-top: 20px;
+}
+@media (min-width: 1020px) {
+  .about__contact {
+    margin-top: 0;
+    width: 410px;
+  }
+}
+
+.about__contact_title {
+  color: white;
+  font-size: 27px;
 }
 
 .communication__title {
+  font-weight: bold;
   display: inline-block;
   width: 50px;
-  padding: 15px;
+}
+@media (min-width: 1020px) {
+  .communication__title {
+    width: 80px;
+  }
 }
 
-.article__content a {
+.communication__content a {
   color: white;
-  font-family: Elsie;
   text-decoration: none;
-  font-size: 18px;
 }

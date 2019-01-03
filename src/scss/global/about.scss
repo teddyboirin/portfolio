@@ -2,27 +2,83 @@
   background: teal;
 }
 
-.about__communication {
-  font-family: Elsie;
-  // background: blue;
+.about__content {
   height: auto;
+  width: 100vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+  margin-top: 100px;
+
+  @media (min-width: 1020px) {
+    text-align: initial;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+.about__presentation {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   width: 300px;
-  margin-left:22px;
-  padding-top:20px;
+
+  p {
+    margin-top: 20px;
+  }
+
+  @media (min-width: 1020px) {
+    width: 410px; 
+    margin-right: 300px;
+  }
+}
+
+
+.about__presentation__title {
+  
+  color:white;
+  font-size: 27px;
+  text-align: center;
+
+  @media (min-width: 1020px) {
+    text-align: initial;
+  }
+
+}
+.about__contact {  
+  width: 300px;
+  margin-top: 30px;
+  p {
+    margin-top: 20px;
+    
+    
+  }
+  @media (min-width: 1020px) {
+    margin-top: 0;
+    width: 410px; 
+  }
+}
+.about__contact_title {
+  
+  color:white;
+  font-size: 27px;
 }
 
 .communication__title {
-  // background: red;
+  font-weight: bold;
   display: inline-block;
   width: 50px;
-  padding: 15px;
+  @media (min-width: 1020px) {
+  width: 80px;
+  }
+
 }
 
-.article__content {
+.communication__content {
   a {
-  color:white;
-  font-family: Elsie;
-  text-decoration: none;
-  font-size: 18px;
+    color:white;
+    text-decoration: none;
+  }
 }
-}
+
