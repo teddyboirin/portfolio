@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Elsie";
+  src: url("../font/Elsie.ttf");
+}
+
+::selection{
+  background-color: white;
+  color: #090909;
+}
+
+/* Firefox */
+::-moz-selection {
+  background-color: white;
+  color: #090909
+}
+
+body {
+  background: #090909;
+  color: white;
+}
+
+.welcome {
+  height: 65vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 300px;
+  background: white;
+
+  @media (min-width:1020px) {
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 70px;
+      width: 900px;
+      background: white;
+    
+      }
+}
+
+.container {
+  font-size: 24px;
+  color: black;
+  font-family: Elsie;
+
+  @media (min-width:1000px) {
+      font-size: 40px;
+  }
+}
+

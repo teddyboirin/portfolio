@@ -1,0 +1,439 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Elsie";
+  src: url("Elsie.6f626e8f.ttf");
+}
+::selection {
+  background-color: white;
+  color: #090909;
+}
+
+/* Firefox */
+::-moz-selection {
+  background-color: white;
+  color: #090909;
+}
+
+body {
+  background: #090909;
+  color: white;
+}
+
+.welcome {
+  height: 65vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 300px;
+  background: white;
+}
+@media (min-width: 1020px) {
+  .welcome__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 900px;
+    background: white;
+  }
+}
+
+.container {
+  font-size: 24px;
+  color: black;
+  font-family: Elsie;
+}
+@media (min-width: 1000px) {
+  .container {
+    font-size: 40px;
+  }
+}
+
+footer {
+  left: 0;
+  margin-top: 90px;
+  width: 100%;
+  font-family: Elsie;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 300;
+}
+footer span {
+  margin-bottom: 10px;
+}
+footer img {
+  height: 40px;
+  width: 40px;
+}
+footer .footer__social {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+  width: 190px;
+}
+footer .footer__social .footer__social--one {
+  height: 15px;
+}
+footer .footer__social .footer__social--two {
+  height: 25px;
+}
+footer .footer__social .footer__social--three {
+  height: 15px;
+}
+
+.header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+}
+@media (min-width: 1080px) {
+  .header {
+    align-items: center;
+  }
+}
+.header .logo {
+  margin-top: 30px;
+  height: 60px;
+  margin-left: 25px;
+  z-index: 10000;
+}
+.header .menu {
+  z-index: 1000;
+  margin-top: 40px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+@media (min-width: 1020px) {
+  .header .menu {
+    display: none;
+  }
+}
+.header .menu-icon,
+.header .menu-icon::after {
+  width: 30px;
+  height: 1px;
+  background: white;
+}
+.header .menu-icon::after {
+  content: "";
+  display: block;
+}
+.header .menu-icon::after {
+  transform: translateY(8px);
+  width: 20px;
+}
+
+.menu-close {
+  z-index: 100;
+  position: fixed;
+  background: #090909;
+  height: 100vh;
+  width: 100vw;
+  transform: translate(100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s;
+}
+@media (min-width: 1020px) {
+  .menu-close {
+    transform: translateX(0);
+    background: none;
+    height: auto;
+    justify-content: flex-end;
+    padding-top: 30px;
+    position: initial;
+    width: 435px;
+  }
+}
+
+.menu-open {
+  transform: translateX(0px);
+}
+
+.items-menu a {
+  font-family: Elsie;
+  color: white;
+  text-decoration: none;
+}
+.items-menu a:hover {
+  opacity: 0.6;
+}
+.items-menu li {
+  font-size: 38px;
+  padding-top: 40px;
+}
+@media (min-width: 1020px) {
+  .items-menu li {
+    display: inline;
+    margin-right: 50px;
+    font-size: 18px;
+  }
+}
+
+.projets__citation {
+  font-family: Elsie;
+  padding: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.projets__container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+.projets__container a {
+  color: white;
+  text-decoration: none;
+}
+@media (min-width: 1020px) {
+  .projets__container {
+    flex-flow: row wrap;
+  }
+}
+
+.projets__container__items {
+  height: 300px;
+  width: 100vw;
+  background: greenyellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 47px;
+  font-family: Elsie;
+  text-shadow: rgba(0, 0, 0, 0.541) 0 0 6px;
+  text-align: center;
+}
+@media (min-width: 1020px) {
+  .projets__container__items {
+    height: 190px;
+    width: 490px;
+    margin-right: 33px;
+    margin-top: 33px;
+    border-radius: 15px 2px 15px 2px;
+  }
+}
+
+.projets__container__items--two {
+  background: thistle;
+}
+
+.projets__container__items--three {
+  background: crimson;
+}
+
+.in_projets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #DA5469;
+  margin-top: -10vh;
+  z-index: -1;
+  font-family: Elsie;
+  font-size: 70px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+}
+@media (min-width: 1020px) {
+  .background {
+    height: 100vh;
+  }
+}
+
+.article__title {
+  font-size: 30px;
+  text-align: center;
+  font-family: Elsie;
+  margin-top: 30px;
+}
+
+.article__content {
+  margin-top: 18px;
+  padding: 22px;
+  font-family: Elsie;
+  font-size: 17px;
+  text-align: center;
+}
+
+.background__title {
+  text-align: center;
+  padding: 5px;
+}
+
+.background--about {
+  background: teal;
+}
+
+.about__communication {
+  font-family: Elsie;
+  height: auto;
+  width: 300px;
+  margin-left: 22px;
+  padding-top: 20px;
+}
+
+.communication__title {
+  display: inline-block;
+  width: 50px;
+  padding: 15px;
+}
+
+.article__content a {
+  color: white;
+  font-family: Elsie;
+  text-decoration: none;
+  font-size: 18px;
+}

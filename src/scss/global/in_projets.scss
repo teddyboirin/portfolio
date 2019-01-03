@@ -1,0 +1,45 @@
+.in_projets {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.background {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: #DA5469;
+  margin-top:-10vh;
+  z-index: -1;
+  font-family: Elsie;
+  font-size: 70px;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.800);
+
+  @media (min-width: 1020px) {
+    // margin-top:-123px;
+    height: 100vh;
+  }
+}
+
+.article__title {
+  font-size: 30px;
+  text-align: center;
+  font-family: Elsie;
+  margin-top: 30px;
+}
+
+.article__content {
+  margin-top: 18px;
+  padding: 22px;
+  font-family: Elsie;
+  font-size: 17px;
+  text-align: center;
+}
+
+.background__title {
+  text-align: center;
+  padding:5px;
+}

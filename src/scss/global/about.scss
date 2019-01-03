@@ -1,0 +1,28 @@
+.background--about {
+  background: teal;
+}
+
+.about__communication {
+  font-family: Elsie;
+  // background: blue;
+  height: auto;
+  width: 300px;
+  margin-left:22px;
+  padding-top:20px;
+}
+
+.communication__title {
+  // background: red;
+  display: inline-block;
+  width: 50px;
+  padding: 15px;
+}
+
+.article__content {
+  a {
+  color:white;
+  font-family: Elsie;
+  text-decoration: none;
+  font-size: 18px;
+}
+}
