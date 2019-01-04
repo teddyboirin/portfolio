@@ -11,14 +11,20 @@
   justify-content: center;
   flex-direction: column;
   width: 100vw;
-  animation: appear 2s;
+  animation: appear 1s;
   a {
-    color: white;
+    color: black;
     text-decoration: none;
+    transition: color .5s;
+
+  
   }
+
+
   @media (min-width: 1020px) {
     // flex-direction: row;
     flex-flow: row wrap;
+   
   } 
 }
 
@@ -30,7 +36,6 @@
   background: -webkit-radial-gradient(center, ellipse cover, #4f4f4f 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
   background: radial-gradient(ellipse at center, #4f4f4f 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4f', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  // background-image: url(../assets/mobile/nespresso.png);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,7 +51,9 @@
     margin-right: 33px;
     margin-top: 33px;
     border-radius: 15px 2px 15px 2px;
-    
+    a:hover {
+      color:rgba(255, 255, 255, 0.685);
+    }
 
   }
 

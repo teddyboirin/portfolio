@@ -269,8 +269,7 @@ footer .footer__social .footer__social--three {
     display: none;
   }
 }
-.header .menu-icon,
-.header .menu-icon::after {
+.header .menu-icon, .header .menu-icon::after {
   width: 30px;
   height: 1px;
   background: white;
@@ -315,6 +314,7 @@ footer .footer__social .footer__social--three {
 .items-menu a {
   color: white;
   text-decoration: none;
+  transition: 0.4s;
 }
 .items-menu a:hover {
   opacity: 0.6;
@@ -342,11 +342,12 @@ footer .footer__social .footer__social--three {
   justify-content: center;
   flex-direction: column;
   width: 100vw;
-  animation: appear 2s;
+  animation: appear 1s;
 }
 .projets__container a {
-  color: white;
+  color: black;
   text-decoration: none;
+  transition: color 0.5s;
 }
 @media (min-width: 1020px) {
   .projets__container {
@@ -381,6 +382,9 @@ footer .footer__social .footer__social--three {
     margin-right: 33px;
     margin-top: 33px;
     border-radius: 15px 2px 15px 2px;
+  }
+  .projets__container__items a:hover {
+    color: rgba(255, 255, 255, 0.685);
   }
 }
 
@@ -465,6 +469,11 @@ footer .footer__social .footer__social--three {
   font-size: 17px;
   text-align: center;
 }
+.article__content img {
+  width: 80%;
+  border-radius: 10px;
+  box-shadow: black 0 0 5px;
+}
 
 .background__title {
   text-align: center;
@@ -498,6 +507,12 @@ footer .footer__social .footer__social--three {
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ce3c37", endColorstr="#431412",GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .background--about {

@@ -29,12 +29,11 @@
     }
   }
 
-.menu-icon,
-.menu-icon::after {
+.menu-icon,.menu-icon::after {
   width: 30px;
   height: 1px;
   background: white;
-}
+} 
 
 
 .menu-icon::after {
@@ -82,6 +81,7 @@
   a {
     color:white;
     text-decoration: none;
+    transition: .4s;
 
     &:hover {
       opacity: 0.6;
