@@ -133,6 +133,24 @@ table {
   font-family: "Elsie";
   src: url("Elsie.6f626e8f.ttf");
 }
+@keyframes opener {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 300px;
+  }
+}
+@media (min-width: 1020px) {
+  @keyframes opener {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 900px;
+    }
+  }
+}
 ::selection {
   background-color: white;
   color: #090909;
@@ -165,6 +183,7 @@ body {
   height: 30px;
   width: 300px;
   background: white;
+  animation: opener 2s;
 }
 @media (min-width: 1020px) {
   .welcome__content {
@@ -323,6 +342,7 @@ footer .footer__social .footer__social--three {
   justify-content: center;
   flex-direction: column;
   width: 100vw;
+  animation: appear 2s;
 }
 .projets__container a {
   color: white;
@@ -337,7 +357,16 @@ footer .footer__social .footer__social--three {
 .projets__container__items {
   height: 300px;
   width: 100vw;
-  background: greenyellow;
+  background: #4f4f4f;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #4f4f4f 0%, #0e0e0e 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #4f4f4f 0%, #0e0e0e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #4f4f4f 0%, #0e0e0e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#4f4f4f", endColorstr="#0e0e0e",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -347,8 +376,8 @@ footer .footer__social .footer__social--three {
 }
 @media (min-width: 1020px) {
   .projets__container__items {
-    height: 190px;
-    width: 490px;
+    height: 210px;
+    width: 510px;
     margin-right: 33px;
     margin-top: 33px;
     border-radius: 15px 2px 15px 2px;
@@ -356,13 +385,41 @@ footer .footer__social .footer__social--three {
 }
 
 .projets__container__items--two {
-  background: thistle;
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #868686 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #868686 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ffffff 0%, #868686 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#868686",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 .projets__container__items--three {
-  background: crimson;
+  background: #ce3c37;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #ce3c37 0%, #431412 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ce3c37 0%, #431412 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ce3c37 0%, #431412 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ce3c37", endColorstr="#431412",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
+@keyframes appear {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .in_projets {
   display: flex;
   align-items: center;
@@ -376,11 +433,19 @@ footer .footer__social .footer__social--three {
   justify-content: center;
   width: 100vw;
   height: 100vh;
-  background: #DA5469;
+  background: #4f4f4f;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #4f4f4f 0%, #0e0e0e 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #4f4f4f 0%, #0e0e0e 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #4f4f4f 0%, #0e0e0e 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#4f4f4f", endColorstr="#0e0e0e",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   margin-top: -10vh;
   z-index: -1;
   font-size: 70px;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
 }
 @media (min-width: 1020px) {
   .background {
@@ -404,6 +469,35 @@ footer .footer__social .footer__social--three {
 .background__title {
   text-align: center;
   padding: 5px;
+  color: black;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+  animation: appear 2s;
+}
+
+.background--wikipedia {
+  background: #ffffff;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #868686 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%, #868686 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ffffff 0%, #868686 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ffffff", endColorstr="#868686",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+.background--adb {
+  background: #ce3c37;
+  /* Old browsers */
+  background: -moz-radial-gradient(center, ellipse cover, #ce3c37 0%, #431412 100%);
+  /* FF3.6-15 */
+  background: -webkit-radial-gradient(center, ellipse cover, #ce3c37 0%, #431412 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: radial-gradient(ellipse at center, #ce3c37 0%, #431412 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ce3c37", endColorstr="#431412",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 .background--about {
