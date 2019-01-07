@@ -469,6 +469,11 @@ footer .footer__social .footer__social--three {
   font-size: 17px;
   text-align: center;
 }
+@media (min-width: 1020px) {
+  .article__content {
+    width: 700px;
+  }
+}
 .article__content img {
   width: 80%;
   border-radius: 10px;
@@ -513,10 +518,14 @@ footer .footer__social .footer__social--three {
   color: white;
   text-decoration: none;
   font-size: 18px;
+  color: grey;
 }
 
 .background--about {
-  background: teal;
+  background: radial-gradient(ellipse at center, #00c5c5 0%, #008080 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ce3c37", endColorstr="#431412",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
 }
 
 .about__content {

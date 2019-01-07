@@ -63,6 +63,10 @@
   font-size: 17px;
   text-align: center;
 
+  @media (min-width: 1020px) {
+    width: 700px;
+  }
+
   img {
     width: 80%;
     border-radius: 10px;
@@ -127,4 +131,5 @@
   color:white;
   text-decoration: none;
   font-size: 18px;
+  color: grey;
 }
