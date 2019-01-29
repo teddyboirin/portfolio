@@ -1,77 +1,102 @@
-
-.projets__citation {
-  padding: 20px;
-  text-align: center;
-  font-size: 24px;
-  
-}
-
-.projets__container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100vw;
-  animation: appear 1s;
-  a {
-    color: black;
-    text-decoration: none;
-    transition: color .5s;
-
-  
-  }
-
-
-  @media (min-width: 1020px) {
-    // flex-direction: row;
-    flex-flow: row wrap;
-   
-  } 
-}
-
-.projets__container__items {
-  height: 300px;
-  width: 100vw;
-  background: #4f4f4f; /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #4f4f4f 0%, #0e0e0e 100%); /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, #4f4f4f 0%,#0e0e0e 100%); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #4f4f4f 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4f', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 47px;
-  text-shadow: rgba(0, 0, 0, 0.541) 0 0 6px;
-  text-align: center;
-
-
-
-  @media (min-width: 1020px) {
-    height: 210px;
-    width: 510px;
-    margin-right: 33px;
-    margin-top: 33px;
-    border-radius: 15px 2px 15px 2px;
-    a:hover {
-      color:rgba(255, 255, 255, 0.685);
+  @keyframes picture__one {
+    from {
+      transform: translateX(-100%);
     }
 
+    to {
+      transform: translateX(0);
+    }
   }
 
-  
+  @keyframes picture__two {
+    from {
+      transform: translateX(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes picture__three {
+    from {
+      transform: translateY(100%);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
+
+.projets {
+  margin-top: 10px;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  @media screen and (min-width: 980px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
 }
 
-.projets__container__items--two {
-  background: #ffffff; /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #ffffff 0%, #868686 100%); /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, #ffffff 0%,#868686 100%); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #ffffff 0%,#868686 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#868686',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.picture--one {
+  background-image: url(../assets/nespresso.png);
+  animation: picture__one 2s;
 }
-.projets__container__items--three {
-  background: #ce3c37; /* Old browsers */
-  background: -moz-radial-gradient(center, ellipse cover, #ce3c37 0%, #431412 100%); /* FF3.6-15 */
-  background: -webkit-radial-gradient(center, ellipse cover, #ce3c37 0%,#431412 100%); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(ellipse at center, #ce3c37 0%,#431412 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce3c37', endColorstr='#431412',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+.picture--two {
+  background-image: url(../assets/wikipedia.png);
+}
+
+.picture--three {
+  background: url(../assets/alsace.png);
+}
+.picture {
+  filter: brightness(60%);
+  cursor: url(../assets/click.png), auto;
+  position: relative;
+  width: calc(100% - 30px);
+  background-size: cover;
+  height: 540px;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3);
+  margin-bottom: 40px;
+
+  @media screen and (min-width: 980px) {
+    margin-left: 30px;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 5;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .picture--two {
+    height: 320px;
+    width: 314px;
+    grid-column: 3 / span 2;
+    grid-row: 2 / span 2;
+  }
+
+  .picture--three {
+    height: 320px;
+    width: 314px;
+    grid-column: 4 / span 2;
+    grid-row: 3 / span 2;
+  }
+  .projets__title {
+    bottom: -30px;
+  }
+}
+.projets__title {
+  color: #6a6a6a;
+  position: absolute;
+  font-size: 16px;
+  bottom: -25px;
+  left: 5px;
 }
 

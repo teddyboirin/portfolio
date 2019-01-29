@@ -105,126 +105,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   // Override the current require with this new one
   return newRequire;
 })({"js/script.js":[function(require,module,exports) {
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
-
-var menu = document.getElementById('menu');
-var menuClose = document.getElementById('menu-close'); // ouvrir le menu 
-
-menu.addEventListener('click', function () {
-  menuClose.classList.toggle('menu-open');
-}); // ——————————————————————————————————————————————————
-// TextScramble
-// ——————————————————————————————————————————————————
-
-var TextScramble =
-/*#__PURE__*/
-function () {
-  function TextScramble(el) {
-    _classCallCheck(this, TextScramble);
-
-    this.el = el;
-    this.chars = '!<>-_\\/[]{}—=+*^?#________';
-    this.update = this.update.bind(this);
+$(window).on("scroll touchmove", function () {
+  if ($(document).scrollTop() >= $("#contact").position().top) {
+    $('body').css('background', '#ffffff');
+  } else {
+    $('body').css('background', '#191b22');
   }
-
-  _createClass(TextScramble, [{
-    key: "setText",
-    value: function setText(newText) {
-      var _this = this;
-
-      var oldText = this.el.innerText;
-      var length = Math.max(oldText.length, newText.length);
-      var promise = new Promise(function (resolve) {
-        return _this.resolve = resolve;
-      });
-      this.queue = [];
-
-      for (var i = 0; i < length; i++) {
-        var from = oldText[i] || '';
-        var to = newText[i] || '';
-        var start = Math.floor(Math.random() * 40);
-        var end = start + Math.floor(Math.random() * 40);
-        this.queue.push({
-          from: from,
-          to: to,
-          start: start,
-          end: end
-        });
-      }
-
-      cancelAnimationFrame(this.frameRequest);
-      this.frame = 0;
-      this.update();
-      return promise;
-    }
-  }, {
-    key: "update",
-    value: function update() {
-      var output = '';
-      var complete = 0;
-
-      for (var i = 0, n = this.queue.length; i < n; i++) {
-        var _this$queue$i = this.queue[i],
-            from = _this$queue$i.from,
-            to = _this$queue$i.to,
-            start = _this$queue$i.start,
-            end = _this$queue$i.end,
-            char = _this$queue$i.char;
-
-        if (this.frame >= end) {
-          complete++;
-          output += to;
-        } else if (this.frame >= start) {
-          if (!char || Math.random() < 0.28) {
-            char = this.randomChar();
-            this.queue[i].char = char;
-          }
-
-          output += "<span class=\"dud\">".concat(char, "</span>");
-        } else {
-          output += from;
-        }
-      }
-
-      this.el.innerHTML = output;
-
-      if (complete === this.queue.length) {
-        this.resolve();
-      } else {
-        this.frameRequest = requestAnimationFrame(this.update);
-        this.frame++;
-      }
-    }
-  }, {
-    key: "randomChar",
-    value: function randomChar() {
-      return this.chars[Math.floor(Math.random() * this.chars.length)];
-    }
-  }]);
-
-  return TextScramble;
-}(); // ——————————————————————————————————————————————————
-// Example
-// ——————————————————————————————————————————————————
-
-
-var phrases = ['Bonjour', 'bienvenue sur le portfolio', 'de Teddy Boirin', 'bonne visite !'];
-var el = document.querySelector('.text');
-var fx = new TextScramble(el);
-var counter = 0;
-
-var next = function next() {
-  fx.setText(phrases[counter]).then(function () {
-    setTimeout(next, 1000);
-  });
-  counter = (counter + 1) % phrases.length;
-};
-
-next();
+});
 },{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -252,7 +139,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50513" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50038" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

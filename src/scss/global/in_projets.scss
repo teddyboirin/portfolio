@@ -1,135 +1,92 @@
 @keyframes appear {
   from {
-    transform: translateY(100%);
     opacity: 0;
   }
 
   to {
-    transform: translateY(0);
     opacity: 1;
   }
 }
-.in_projets {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
 
-.background {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-  height: 100vh;
-  background: #4f4f4f; /* Old browsers */
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    #4f4f4f 0%,
-    #0e0e0e 100%
-  ); /* FF3.6-15 */
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    #4f4f4f 0%,
-    #0e0e0e 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(
-    ellipse at center,
-    #4f4f4f 0%,
-    #0e0e0e 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4f4f4f', endColorstr='#0e0e0e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+@keyframes line {
+  from {
+    width: 0;
+  }
 
-  margin-top: -10vh;
-  z-index: -1;
-  font-size: 70px;
-
-  @media (min-width: 1020px) {
-    height: 100vh;
+  to {
+    width: 70px;
   }
 }
 
-.article__title {
-  font-size: 30px;
-  text-align: center;
+@keyframes specs {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+.logo a {
+  font-family: MANIFESTO;
+  line-height: normal;
+  font-size: 15px;
+  color: #eeefef;
   margin-top: 30px;
+  margin-left: 10px;
+  text-decoration: none;
+  display: block;
+  animation: appear 1400ms;
+  @media screen and (min-width: 980px) {
+    margin-left: 30px;
+  }
+}
+.header--special {
+  justify-content: space-between;
 }
 
-.article__content {
-  margin-top: 18px;
-  padding: 22px;
-  font-size: 17px;
-  text-align: center;
+.container__projets {
+  margin: 30px 10px 30px 10px;
 
-  @media (min-width: 1020px) {
+  height: auto;
+  @media screen and (min-width: 980px) {
+    margin: 30px;
+  }
+}
+
+.title__project {
+  color: white;
+  font-size: 23px;
+  font-family: Manifesto;
+}
+.text__project {
+  line-height: 112%;
+  color: #525356;
+  font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  @media screen and (min-width: 980px) {
     width: 700px;
   }
-
-  img {
-    width: 80%;
-    border-radius: 10px;
-    box-shadow: black 0 0 5px;
-  }
 }
-
-.background__title {
-  text-align: center;
-  padding: 5px;
-  color: black;
-  text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
-  animation: appear 2s;
-}
-
-.background--wikipedia {
-  background: #ffffff; /* Old browsers */
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    #ffffff 0%,
-    #868686 100%
-  ); /* FF3.6-15 */
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    #ffffff 0%,
-    #868686 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(
-    ellipse at center,
-    #ffffff 0%,
-    #868686 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#868686',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-.background--adb {
-  background: #ce3c37; /* Old browsers */
-  background: -moz-radial-gradient(
-    center,
-    ellipse cover,
-    #ce3c37 0%,
-    #431412 100%
-  ); /* FF3.6-15 */
-  background: -webkit-radial-gradient(
-    center,
-    ellipse cover,
-    #ce3c37 0%,
-    #431412 100%
-  ); /* Chrome10-25,Safari5.1-6 */
-  background: radial-gradient(
-    ellipse at center,
-    #ce3c37 0%,
-    #431412 100%
-  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ce3c37', endColorstr='#431412',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-}
-
-
-.link {
-  color:white;
-  text-decoration: none;
+.role {
+  margin-top: 30px;
+  font-family: garamond-premier-pro-display, serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
   font-size: 18px;
-  color: grey;
+}
+
+.line {
+  height: 1px;
+  width: 70px;
+  background-color: white;
+  display: inline-block;
+  transform: translateY(-4px);
+  animation: line 1s;
+}
+
+.role--specs {
+  animation: specs 2s;
 }

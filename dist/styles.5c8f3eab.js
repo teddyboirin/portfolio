@@ -176,7 +176,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./../font/Elsie.ttf":[["Elsie.6f626e8f.ttf","font/Elsie.ttf"],"font/Elsie.ttf"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./../font/MANIFESTO.ttf":[["MANIFESTO.f579f5bd.ttf","font/MANIFESTO.ttf"],"font/MANIFESTO.ttf"],"./../assets/cursor.png":[["cursor.08143b09.png","assets/cursor.png"],"assets/cursor.png"],"./../assets/nespresso.png":[["nespresso.470d2dc1.png","assets/nespresso.png"],"assets/nespresso.png"],"./../assets/wikipedia.png":[["wikipedia.671ae565.png","assets/wikipedia.png"],"assets/wikipedia.png"],"./../assets/alsace.png":[["alsace.2febe4c0.png","assets/alsace.png"],"assets/alsace.png"],"./../assets/click.png":[["click.e0a653a4.png","assets/click.png"],"assets/click.png"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -203,7 +203,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50513" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50038" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

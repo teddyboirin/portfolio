@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Teddy Boirin - Portfolio</title>
-  <link rel="stylesheet" href="/styles.5c8f3eab.css">
-  <script defer="" src="/script.d573be0b.js"></script>
-<script src="/styles.5c8f3eab.js"></script></head>
-<body>
-    
-  <header class="header">
-    
-    <a href="/index.html">
-    <img class="logo" src="/logo.7bbc3b96.png" alt="logo"></a>
-    <div class="menu" id="menu">
-        <div class="menu-icon" id="menu-icon"></div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teddy Boirin - Portfolio</title>
+    <link rel="stylesheet" href="/styles.5c8f3eab.css">
+    <script defer="" src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+    <script defer="" src="/script.d573be0b.js"></script>
+  <script src="/styles.5c8f3eab.js"></script></head>
+  <body>
+    <header>
+      <div class="header__social">
+        <a href="https://twitter.com/teddyboirin" target="_blank"><img class="first" src="/twitter.9c616447.svg" alt=""></a>
+        <a href="https://dribbble.com/teddyboirin" target="_blank"><img src="/dribbble.3bbed70e.svg" alt=""></a>
+        <a href="https://www.linkedin.com/in/teddyboirin/" target="_blank"><img src="/linkedin.b71b7340.svg" alt=""></a>
+        <a href="https://www.instagram.com/__tbdesign/" target="_blank"><img src="/instagram.1f0f2107.svg" alt=""></a>
       </div>
-      <nav class="menu-close" id="menu-close">
-          <ul class="items-menu">
-            <li><a href="/index.html">Accueil</a></li>
-            <li><a href="/projets.html">Projets</a></li>
-            <li><a href="/about.html">À propos</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-          </ul>
-        </nav>
-  </header>
+    </header>
 
-  
-
-    <section class="welcome">
-       <div class="welcome__content">
-          <div class="container">
-              <div class="text"></div>
-            </div>
-       </div>
+    <section class="home" id="home">
+      <p class="home__bigTitle">Teddy Boirin</p>
+      <p class="home__specs">
+        21 ans - Paris - Développeur Front-end - UX/UI Designer
+      </p>
+      <p class="home__presentation">
+        Étudiant à HETIC (Hautes études des technologies de l'information et de la communication) où j'y prépare un Bachelor Web.
+        Actuellement à la recherche d'un stage pour cet été et d'une alternance de 2 ans !
+      </p>
     </section>
 
-    <footer class="footer">
-    <div class="footer__social">
-        <a href=""><img class="footer__social--one" src="/in.24155f1b.svg" alt=""></a>
-        <a href=""><img class="footer__social--two" src="/twitter.2982585c.svg" alt=""></a>
-        <a href=""><img class="footer__social--three" src="/behance.14de7c26.svg" alt=""></a>
-      </div>
-      <span>Teddy Boirin © 2018 Tous droits réservés </span>
-    </footer>
+    <section class="projets" id="projets">
+      <a href="/nespresso.html" class="picture picture--one" id="picture">
+        <span class="projets__title">Nespresso</span>
+      </a>
+      <a href="/wikipedia.html" class="picture picture--two">
+        <span class="projets__title">Wikipedia</span>
+      </a>
+      <a href="/adb.html" class="picture picture--three">
+        <span class="projets__title">Alsace de Bagnolet</span>
+      </a>
+    </section>
+    <!-- <a href="">
+        <div class="projets__all">Voir tout les projets</div>
+      </a> -->
+    <section class="contact__content" id="contact">
+        <h2>Envie de coopérer ? </h2>
+        <p><a href="mailto:hello@teddyboirin.com">Envoyez-moi un mail !</a></p>
 
-</body>
+
+      
+    </section>
+  </body>
 </html>

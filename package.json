@@ -16,7 +16,9 @@
   },
   "dependencies": {
     "express": "^4.16.4",
+    "html": "^2.0.3",
     "layout": "^2.2.0",
-    "php": "0.0.1"
+    "php": "0.0.1",
+    "waypoints": "^4.0.1"
   }
 }
