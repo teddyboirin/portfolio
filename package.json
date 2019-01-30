@@ -1,16 +1,18 @@
 {
   "name": "teddyboirin",
   "version": "1.0.0",
-  "description": "",
+  "description": "Portfolio",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
   "keywords": [],
-  "author": "",
+  "author": "BOIRIN Teddy",
   "license": "ISC",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "parcel-bundler": "^1.11.0",
     "sass": "^1.15.2"
   },
@@ -19,6 +21,8 @@
     "html": "^2.0.3",
     "layout": "^2.2.0",
     "php": "0.0.1",
-    "waypoints": "^4.0.1"
+    "build": "babel --no-babelrc src -w -d js --preset=env"
   }
+  
 }
+

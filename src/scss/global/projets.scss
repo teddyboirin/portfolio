@@ -1,32 +1,32 @@
-  @keyframes picture__one {
-    from {
-      transform: translateX(-100%);
-    }
-
-    to {
-      transform: translateX(0);
-    }
+@keyframes picture__one {
+  from {
+    transform: translateX(-100%);
   }
 
-  @keyframes picture__two {
-    from {
-      transform: translateX(100%);
-    }
+  to {
+    transform: translateX(0);
+  }
+}
 
-    to {
-      transform: translateX(0);
-    }
+@keyframes picture__two {
+  from {
+    transform: translateX(100%);
   }
 
-  @keyframes picture__three {
-    from {
-      transform: translateY(100%);
-    }
-
-    to {
-      transform: translateX(0);
-    }
+  to {
+    transform: translateX(0);
   }
+}
+
+@keyframes picture__three {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
 
 .projets {
   margin-top: 10px;
@@ -99,4 +99,18 @@
   bottom: -25px;
   left: 5px;
 }
+.projets__all {
+  margin: 40px auto;
+  // margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(233, 233, 233);
+  height: 40px;
+  width: 160px;
+  border-radius: 100px;
+  color:black;
+  box-shadow: black 0 0 10px;
+  transition: 2s;
 
+}

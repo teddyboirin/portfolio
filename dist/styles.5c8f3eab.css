@@ -337,6 +337,20 @@ header {
   left: 5px;
 }
 
+.projets__all {
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e9e9e9;
+  height: 40px;
+  width: 160px;
+  border-radius: 100px;
+  color: black;
+  box-shadow: black 0 0 10px;
+  transition: 2s;
+}
+
 @keyframes appear {
   from {
     opacity: 0;
@@ -361,6 +375,14 @@ header {
     opacity: 1;
   }
 }
+@keyframes get {
+  from {
+    transform: translate(-100%);
+  }
+  to {
+    transform: translate(0);
+  }
+}
 .logo a {
   font-family: MANIFESTO;
   line-height: normal;
@@ -383,12 +405,43 @@ header {
 }
 
 .container__projets {
+  position: relative;
   margin: 30px 10px 30px 10px;
   height: auto;
 }
 @media screen and (min-width: 980px) {
   .container__projets {
     margin: 30px;
+  }
+}
+
+.next a {
+  position: absolute;
+  margin-top: 20px;
+  right: 0;
+  margin-bottom: 50px;
+  color: white;
+  font-family: Manifesto;
+  font-size: 14px;
+}
+@media screen and (min-width: 980px) {
+  .next a {
+    font-size: 17px;
+  }
+}
+
+.previous a {
+  position: absolute;
+  margin-bottom: 50px;
+  left: 0;
+  margin-top: 20px;
+  color: white;
+  font-family: Manifesto;
+  font-size: 13px;
+}
+@media screen and (min-width: 980px) {
+  .previous a {
+    font-size: 17px;
   }
 }
 
@@ -431,6 +484,29 @@ header {
 
 .role--specs {
   animation: specs 2s;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.project img {
+  width: 60%;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, 0.466) 0 0 10px;
+  animation: get 2s;
+}
+
+.project--noShadow img {
+  box-shadow: 0 0 0;
+}
+
+.link_project a {
+  color: rgba(255, 255, 255, 0.37);
+  font-size: 13px;
+  display: block;
 }
 
 .contact__content {
